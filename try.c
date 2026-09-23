@@ -402,9 +402,6 @@ int main(){
      else if(opt=='n'){
         next_song(&msg_iov1,&msg_iov2,msg_iov_arr2,&msg_hdr,sockfd);
      }
-     else{
-         display_help();
-     }
    }
 
 
