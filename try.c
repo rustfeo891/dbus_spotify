@@ -385,14 +385,7 @@ int main(){
    while(opt!='q'){
      opt=fgetc(stdin);
      if(opt=='h'){
-        printf("dbus spotify controller\n");
-	printf(">press p to play song\n");
-	printf(">press s to pause song\n");
-	printf(">press i to show song info\n");
-	printf(">press b to go back to previous song\n");
-	printf(">press n to go to next song\n");
-	printf(">press h to print help message\n");
-	printf(">press q to quit the application\n");
+	display_help();
      }
      else if(opt=='p'){
         play_song(&msg_iov1,&msg_iov2,msg_iov_arr2,&msg_hdr,sockfd);
@@ -409,7 +402,7 @@ int main(){
      else if(opt=='n'){
         next_song(&msg_iov1,&msg_iov2,msg_iov_arr2,&msg_hdr,sockfd);
      }
-     else if(opt=='h'){
+     else{
          display_help();
      }
    }
