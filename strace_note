@@ -1,0 +1,6 @@
+strace -f qdbus  org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play 2>spotify_strace1
+strace -f -s 2048 qdbus  org.mpris.MediaPlayer2.spotify  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play() 2>playsong_strace
+strace -f -s 2048 qdbus  org.mpris.MediaPlayer2.spotify  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play 2>playsong_strace
+strace -f -s 2048 qdbus  org.mpris.MediaPlayer2.spotify  /org/mpris/MediaPlayer2  org.mpris.MediaPlayer2.Player.Next 2>next_song_strace
+strace -f -s 2048 qdbus  org.mpris.MediaPlayer2.spotify  /org/mpris/MediaPlayer2  org.mpris.MediaPlayer2.Player.Pause 2>pause_song-strace
+strace -f -s 2048 qdbus  org.mpris.MediaPlayer2.spotify  /org/mpris/MediaPlayer2  org.mpris.MediaPlayer2.Player.Previous 2>previous_song_strace
